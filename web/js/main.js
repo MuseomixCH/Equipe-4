@@ -3,7 +3,7 @@
 */
 function loadFloor(floor){
     floor = typeof floor !== 'undefined' ? floor : 2;
-    $('#mainContent img').attr('src','img/maps/floor'+floor+'.svg');
+    $('#mainContent img').attr('src','img/maps/floor'+floor+'.png');
 }
 
 /*
