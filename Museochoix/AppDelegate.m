@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <VDARSDK/VDARSDK.h>
+#import "MyCameraImageSource.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +18,27 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSString *modelDir=[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"models"];
+    
+    if(![VDARSDKController startSDK:modelDir withLicenseKey:@"698s5w7llqmk7qewoj83"]) {
+        if(![VDARSDKController sharedInstance]) {
+            NSLog(@"Error while loading the model manager. Fatal.");
+            UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:@"Vidinoti AR SDK Error" message:@"Error while starting the AR SDK Manager." delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            [alertView show];
+        }
+    }
+    
+    [VDARSDKController sharedInstance].enableCodesRecognition=YES;
+    
+    MyCameraImageSource *cameraSource=[[MyCameraImageSource alloc] init];
+    
+    [VDARSDKController sharedInstance].imageSender=cameraSource;
+
+    
+    [[VDARSDKController sharedInstance] application:application didReceiveRemoteNotification:launchOptions];
+
+    
     // Override point for customization after application launch.
     return YES;
 }

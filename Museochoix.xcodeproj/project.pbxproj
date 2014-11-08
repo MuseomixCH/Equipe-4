@@ -14,6 +14,27 @@
 		4E0C35591A0E4E4A00507E4B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35581A0E4E4A00507E4B /* Images.xcassets */; };
 		4E0C355C1A0E4E4A00507E4B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C355A1A0E4E4A00507E4B /* LaunchScreen.xib */; };
 		4E0C35681A0E4E4A00507E4B /* MuseochoixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C35671A0E4E4A00507E4B /* MuseochoixTests.m */; };
+		4E0C35731A0E51DE00507E4B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C35721A0E51DE00507E4B /* MapViewController.m */; };
+		4E0C35751A0E530800507E4B /* VDARSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35741A0E530800507E4B /* VDARSDK.framework */; };
+		4E0C35781A0E532B00507E4B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35771A0E532B00507E4B /* AVFoundation.framework */; };
+		4E0C357A1A0E533000507E4B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35791A0E533000507E4B /* CoreBluetooth.framework */; };
+		4E0C35841A0E537300507E4B /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C357B1A0E537300507E4B /* CoreImage.framework */; };
+		4E0C35851A0E537300507E4B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C357C1A0E537300507E4B /* CoreLocation.framework */; };
+		4E0C35861A0E537300507E4B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C357D1A0E537300507E4B /* CoreMedia.framework */; };
+		4E0C35871A0E537300507E4B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C357E1A0E537300507E4B /* ImageIO.framework */; };
+		4E0C35881A0E537300507E4B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C357F1A0E537300507E4B /* OpenGLES.framework */; };
+		4E0C35891A0E537300507E4B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35801A0E537300507E4B /* QuartzCore.framework */; };
+		4E0C358A1A0E537300507E4B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35811A0E537300507E4B /* Security.framework */; };
+		4E0C358B1A0E537300507E4B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35821A0E537300507E4B /* Social.framework */; };
+		4E0C358C1A0E537300507E4B /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35831A0E537300507E4B /* Twitter.framework */; };
+		4E0C358E1A0E538200507E4B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C358D1A0E538200507E4B /* MessageUI.framework */; };
+		4E0C35901A0E539400507E4B /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C358F1A0E539400507E4B /* libiconv.dylib */; };
+		4E0C35921A0E539A00507E4B /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35911A0E539A00507E4B /* libc++.dylib */; };
+		4E0C35941A0E53A200507E4B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35931A0E53A200507E4B /* libz.dylib */; };
+		4E0C35961A0E53CD00507E4B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35951A0E53CD00507E4B /* MediaPlayer.framework */; };
+		4E0C35981A0E53D400507E4B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35971A0E53D400507E4B /* Accelerate.framework */; };
+		4E0C359A1A0E53D800507E4B /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35991A0E53D800507E4B /* libicucore.dylib */; };
+		4E0C359D1A0E549100507E4B /* MyCameraImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C359C1A0E549100507E4B /* MyCameraImageSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +61,29 @@
 		4E0C35611A0E4E4A00507E4B /* MuseochoixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuseochoixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0C35661A0E4E4A00507E4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E0C35671A0E4E4A00507E4B /* MuseochoixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuseochoixTests.m; sourceTree = "<group>"; };
+		4E0C35711A0E51DE00507E4B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		4E0C35721A0E51DE00507E4B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		4E0C35741A0E530800507E4B /* VDARSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VDARSDK.framework; path = "../../../Development/ContextualSDK/build/Release-universalpublic/VDARSDK.framework"; sourceTree = "<group>"; };
+		4E0C35771A0E532B00507E4B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4E0C35791A0E533000507E4B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		4E0C357B1A0E537300507E4B /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		4E0C357C1A0E537300507E4B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4E0C357D1A0E537300507E4B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		4E0C357E1A0E537300507E4B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		4E0C357F1A0E537300507E4B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		4E0C35801A0E537300507E4B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4E0C35811A0E537300507E4B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4E0C35821A0E537300507E4B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		4E0C35831A0E537300507E4B /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		4E0C358D1A0E538200507E4B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4E0C358F1A0E539400507E4B /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		4E0C35911A0E539A00507E4B /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		4E0C35931A0E53A200507E4B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4E0C35951A0E53CD00507E4B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		4E0C35971A0E53D400507E4B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		4E0C35991A0E53D800507E4B /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		4E0C359B1A0E549100507E4B /* MyCameraImageSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCameraImageSource.h; sourceTree = "<group>"; };
+		4E0C359C1A0E549100507E4B /* MyCameraImageSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCameraImageSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +91,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0C359A1A0E53D800507E4B /* libicucore.dylib in Frameworks */,
+				4E0C35981A0E53D400507E4B /* Accelerate.framework in Frameworks */,
+				4E0C35961A0E53CD00507E4B /* MediaPlayer.framework in Frameworks */,
+				4E0C35941A0E53A200507E4B /* libz.dylib in Frameworks */,
+				4E0C35921A0E539A00507E4B /* libc++.dylib in Frameworks */,
+				4E0C35901A0E539400507E4B /* libiconv.dylib in Frameworks */,
+				4E0C358E1A0E538200507E4B /* MessageUI.framework in Frameworks */,
+				4E0C35841A0E537300507E4B /* CoreImage.framework in Frameworks */,
+				4E0C35851A0E537300507E4B /* CoreLocation.framework in Frameworks */,
+				4E0C35861A0E537300507E4B /* CoreMedia.framework in Frameworks */,
+				4E0C35871A0E537300507E4B /* ImageIO.framework in Frameworks */,
+				4E0C35881A0E537300507E4B /* OpenGLES.framework in Frameworks */,
+				4E0C35891A0E537300507E4B /* QuartzCore.framework in Frameworks */,
+				4E0C358A1A0E537300507E4B /* Security.framework in Frameworks */,
+				4E0C358B1A0E537300507E4B /* Social.framework in Frameworks */,
+				4E0C358C1A0E537300507E4B /* Twitter.framework in Frameworks */,
+				4E0C357A1A0E533000507E4B /* CoreBluetooth.framework in Frameworks */,
+				4E0C35781A0E532B00507E4B /* AVFoundation.framework in Frameworks */,
+				4E0C35751A0E530800507E4B /* VDARSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +126,7 @@
 		4E0C353F1A0E4E4A00507E4B = {
 			isa = PBXGroup;
 			children = (
+				4E0C358D1A0E538200507E4B /* MessageUI.framework */,
 				4E0C354A1A0E4E4A00507E4B /* Museochoix */,
 				4E0C35641A0E4E4A00507E4B /* MuseochoixTests */,
 				4E0C35491A0E4E4A00507E4B /* Products */,
@@ -81,14 +145,20 @@
 		4E0C354A1A0E4E4A00507E4B /* Museochoix */ = {
 			isa = PBXGroup;
 			children = (
+				4E0C35761A0E531D00507E4B /* Framework */,
 				4E0C354F1A0E4E4A00507E4B /* AppDelegate.h */,
 				4E0C35501A0E4E4A00507E4B /* AppDelegate.m */,
+				4E0C359B1A0E549100507E4B /* MyCameraImageSource.h */,
+				4E0C359C1A0E549100507E4B /* MyCameraImageSource.m */,
 				4E0C35521A0E4E4A00507E4B /* ViewController.h */,
 				4E0C35531A0E4E4A00507E4B /* ViewController.m */,
 				4E0C35551A0E4E4A00507E4B /* Main.storyboard */,
 				4E0C35581A0E4E4A00507E4B /* Images.xcassets */,
 				4E0C355A1A0E4E4A00507E4B /* LaunchScreen.xib */,
 				4E0C354B1A0E4E4A00507E4B /* Supporting Files */,
+				4E0C35711A0E51DE00507E4B /* MapViewController.h */,
+				4E0C35721A0E51DE00507E4B /* MapViewController.m */,
+				4E0C35741A0E530800507E4B /* VDARSDK.framework */,
 			);
 			path = Museochoix;
 			sourceTree = "<group>";
@@ -117,6 +187,30 @@
 				4E0C35661A0E4E4A00507E4B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E0C35761A0E531D00507E4B /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				4E0C35991A0E53D800507E4B /* libicucore.dylib */,
+				4E0C35971A0E53D400507E4B /* Accelerate.framework */,
+				4E0C35951A0E53CD00507E4B /* MediaPlayer.framework */,
+				4E0C35931A0E53A200507E4B /* libz.dylib */,
+				4E0C35911A0E539A00507E4B /* libc++.dylib */,
+				4E0C358F1A0E539400507E4B /* libiconv.dylib */,
+				4E0C357B1A0E537300507E4B /* CoreImage.framework */,
+				4E0C357C1A0E537300507E4B /* CoreLocation.framework */,
+				4E0C357D1A0E537300507E4B /* CoreMedia.framework */,
+				4E0C357E1A0E537300507E4B /* ImageIO.framework */,
+				4E0C357F1A0E537300507E4B /* OpenGLES.framework */,
+				4E0C35801A0E537300507E4B /* QuartzCore.framework */,
+				4E0C35811A0E537300507E4B /* Security.framework */,
+				4E0C35821A0E537300507E4B /* Social.framework */,
+				4E0C35831A0E537300507E4B /* Twitter.framework */,
+				4E0C35791A0E533000507E4B /* CoreBluetooth.framework */,
+				4E0C35771A0E532B00507E4B /* AVFoundation.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +313,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0C359D1A0E549100507E4B /* MyCameraImageSource.m in Sources */,
 				4E0C35541A0E4E4A00507E4B /* ViewController.m in Sources */,
 				4E0C35511A0E4E4A00507E4B /* AppDelegate.m in Sources */,
 				4E0C354E1A0E4E4A00507E4B /* main.m in Sources */,
+				4E0C35731A0E51DE00507E4B /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +396,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -335,6 +432,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -345,6 +443,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/mathieu/Development/ContextualSDK/build/Release-universalpublic",
+				);
 				INFOPLIST_FILE = Museochoix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +457,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/mathieu/Development/ContextualSDK/build/Release-universalpublic",
+				);
 				INFOPLIST_FILE = Museochoix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +520,7 @@
 				4E0C356D1A0E4E4A00507E4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E0C356E1A0E4E4A00507E4B /* Build configuration list for PBXNativeTarget "MuseochoixTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +529,7 @@
 				4E0C35701A0E4E4A00507E4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
