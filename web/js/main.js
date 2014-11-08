@@ -43,18 +43,20 @@ function transparentBackground(){
 }
 
 $( document ).ready(function() {
-    var fun = "bja43whspny60x2,knliyajr8y6x0yt,xrhnpx6pfdlquob";
-    var app = "bja43whspny60x2,knliyajr8y6x0yt";
-    var idList = '';
-
+    var idList = ["bja43whspny60x2","knliyajr8y6x0yt","xrhnpx6pfdlquob"];
+    var theList;
     $('#formmuseochoix').submit(function(e) {
         e.preventDefault();
-        if( $('#facteurs .active input').val() == 'fun'){
-            idList = fun;
+        if($('#timing .active input').val() == '30'){
+            theList = idList.slice(0, 1);
+        }else if($('#timing .active input').val() == '60'){
+            theList = idList.slice(0, 3);
+        }else if($('#timing .active input').val() == '90'){
+            theList = idList.slice(0, 5);
         }else{
-            idList = app;
+            theList = idList;
         }
-        document.location = 'museochoix://loadContexts?ids='+idList;
+        document.location = 'museochoix://loadContexts?ids='+theList.toString();
         return false;
     });
 
