@@ -1,0 +1,4 @@
+Museochoix
+==========
+
+Museomix project
