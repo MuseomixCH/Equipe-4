@@ -50,6 +50,16 @@ function loadPersonPicture(imgUrl){
     }
 }
 
+$.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if (results==null){
+        return null;
+    }
+    else{
+        return results[1] || 0;
+    }
+}
+
 $( document ).ready(function() {
     var idList = ["bja43whspny60x2","knliyajr8y6x0yt","xrhnpx6pfdlquob"];
     var theList;
