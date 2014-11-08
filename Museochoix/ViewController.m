@@ -21,12 +21,27 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"form.html" ofType:@""]];
+    //Synchro
+    [[VDARRemoteController sharedInstance] syncRemoteModelsAsynchronouslyWithPriors:@[ [VDARTagPrior tagWithName:@"museomix"] ] withCompletionBlock:^(id result, NSError *err) {
+        NSLog(@"Synced %lu models",((NSArray*)result).count);
+    }];
+    
+    //[self parseURL:[NSURL URLWithString:@"museomix://loadContexts?ids=bja43whspny60x2,knliyajr8y6x0yt,xrhnpx6pfdlquob"]];
+    
+    NSString * file = [[NSBundle mainBundle] pathForResource:@"form.html" ofType:@"" inDirectory:@"web"];
+    if(!file) {
+        NSLog(@"Error while loading intro screen.");
+        return;
+    }
+    NSURL *url = [NSURL fileURLWithPath:file];
     
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,26 +49,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)parseURL:(NSURL*)url {
+    NSString *q = url.query;
+    
+    q = [q substringFromIndex:4];
+    
+    NSArray * ids = [q componentsSeparatedByString:@","];
+    
+  //  [[VDARSDKController sharedInstance] unloadAllNonRootContexts];
+    
+    for(NSString* _id in ids) {
+      //  [[VDARSDKController sharedInstance] loadContext:_id];
+    }
+    
+    [self performSegueWithIdentifier:@"showMap" sender:self];
+}
+
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
     NSString * url = request.URL.absoluteString;
     
     if([url hasPrefix:@"museochoix://"]) {
-        NSString *q = request.URL.query;
-        
-        q = [q substringFromIndex:4];
-        
-        NSArray * ids = [q componentsSeparatedByString:@","];
-        
-        [[VDARSDKController sharedInstance] unloadAllNonRootContexts];
-        
-        for(NSString* _id in ids) {
-            [[VDARSDKController sharedInstance] loadContext:_id];
-        }
-        
-        [self performSegueWithIdentifier:@"showMap" sender:self];
-        
-        return NO;
+                return NO;
     }
     
     return YES;
