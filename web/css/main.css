@@ -1,7 +1,3 @@
-html, body {
-    background-color: transparent;
-}
-
 body {
     padding-top: 70px;
     padding-bottom: 20px;
@@ -21,6 +17,26 @@ body {
     width: 4%;
     height: 4%;
     position: absolute;
+}
+
+#subContent .actionBtn {
+    width: 150px;
+    height: 150px;
+    background: #EE0000;
+    border-radius: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 6em;
+    line-height: 2em;
+    color: #000000;
+}
+
+#subContent .actionBtn a {
+    color: #000000;
+}
+
+#subContent .actionBtn a:hover {
+    color: #CCCCCC;
 }
 
 @-webkit-keyframes grow {

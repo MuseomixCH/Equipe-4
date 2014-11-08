@@ -17,7 +17,13 @@ function drawDot(x,y,className='',name=''){
  */
 
 function showButton(content='photo'){
-
+    var icon;
+    if(content=='photo'){
+        button = '<a href="#" id="takePic"><span class="glyphicon glyphicon-camera"></span></div>';
+    }else{
+        button = '<span class="glyphicon glyphicon-fullscreen"></span>';
+    }
+    $('#subContent').html('<div class="actionBtn">'+button+'</div>');
 }
 
 /*
@@ -42,5 +48,4 @@ $( document ).ready(function() {
         document.location = 'museochoix://loadContexts?ids='+idList;
         return false;
     });
-
 });
