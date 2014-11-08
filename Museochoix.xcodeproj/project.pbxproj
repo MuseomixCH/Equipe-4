@@ -35,6 +35,7 @@
 		4E0C35981A0E53D400507E4B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35971A0E53D400507E4B /* Accelerate.framework */; };
 		4E0C359A1A0E53D800507E4B /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35991A0E53D800507E4B /* libicucore.dylib */; };
 		4E0C359D1A0E549100507E4B /* MyCameraImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C359C1A0E549100507E4B /* MyCameraImageSource.m */; };
+		4E0C35CA1A0E5C8500507E4B /* web in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35C91A0E5C8500507E4B /* web */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		4E0C35991A0E53D800507E4B /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		4E0C359B1A0E549100507E4B /* MyCameraImageSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCameraImageSource.h; sourceTree = "<group>"; };
 		4E0C359C1A0E549100507E4B /* MyCameraImageSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCameraImageSource.m; sourceTree = "<group>"; };
+		4E0C35C91A0E5C8500507E4B /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		4E0C354A1A0E4E4A00507E4B /* Museochoix */ = {
 			isa = PBXGroup;
 			children = (
+				4E0C35C91A0E5C8500507E4B /* web */,
 				4E0C35761A0E531D00507E4B /* Framework */,
 				4E0C354F1A0E4E4A00507E4B /* AppDelegate.h */,
 				4E0C35501A0E4E4A00507E4B /* AppDelegate.m */,
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E0C35571A0E4E4A00507E4B /* Main.storyboard in Resources */,
+				4E0C35CA1A0E5C8500507E4B /* web in Resources */,
 				4E0C355C1A0E4E4A00507E4B /* LaunchScreen.xib in Resources */,
 				4E0C35591A0E4E4A00507E4B /* Images.xcassets in Resources */,
 			);
@@ -448,6 +452,7 @@
 					"/Users/mathieu/Development/ContextualSDK/build/Release-universalpublic",
 				);
 				INFOPLIST_FILE = Museochoix/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -462,6 +467,7 @@
 					"/Users/mathieu/Development/ContextualSDK/build/Release-universalpublic",
 				);
 				INFOPLIST_FILE = Museochoix/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
