@@ -9,7 +9,7 @@
 #import "MapViewController.h"
 
 @interface MapViewController ()<UIWebViewDelegate> {
-    NSString *floor;
+    NSString *_floor;
     int coordX,coordY;
     NSString *screenType;
     BOOL isAR;
@@ -35,6 +35,7 @@
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     self.webView.opaque = NO;
     self.webView.backgroundColor = [UIColor clearColor];
+    self.webView.delegate= self;
     [self.view addSubview:self.webView];
 }
 
@@ -43,7 +44,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)annotationViewDidBecomeEmpty {
+    self.webView.hidden=NO;
+}
+
+-(void)annotationViewDidPresentAnnotations {
+    self.webView.hidden=YES;
+}
+
 -(void)loadObject:(NSString *)_id {
+    
+    NSLog(@"Loading object %@",_id);
+    
     VDARContext *context  = [[VDARSDKController sharedInstance] getContext:_id];
     [self objectParser:context];
     
@@ -64,11 +76,11 @@
     [super viewWillAppear:animated];
     
     
-    if(!currentID) {
-        currentID = self.allIDs[0];
-        [self loadObject:currentID];
+    if(currentID) {
+        currentIndex++;
     }
-    
+    currentID = self.allIDs[currentIndex];
+    [self loadObject:currentID];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -89,7 +101,7 @@
     }
     
     //First line is floor
-    floor = lines[0];
+    _floor = lines[0];
     NSString *coordoninate = lines[1];
     NSArray *xy = [coordoninate componentsSeparatedByString:@","];
     
@@ -150,10 +162,10 @@
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
     
-    if(floor) {
-        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"loadFloor(%@)",floor]];
+    if(_floor) {
+        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"loadFloor('%@')",_floor]];
         [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"drawDot(%d,%d,'')",coordX,coordY]];
-        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"showButton(%@)",isAR ? @"photo" : @"beacon"]];
+        [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"showButton('%@')",isAR ? @"photo" : @"beacon"]];
     }
  }
 
