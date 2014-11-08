@@ -1,22 +1,62 @@
+html, body {
+    background-color: transparent;
+}
 
+body {
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+#mainContent {
+    margin-bottom: 10px;
+}
 
+#mainContent img {
+    width: 100%;
+}
 
+#mainContent .dot {
+    background: red;
+    border-radius: 50%;
+    width: 4%;
+    height: 4%;
+    position: absolute;
+}
 
+@-webkit-keyframes grow {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(0.5); }
+    100% { -webkit-transform: scale(1); }
+}
 
+@-moz-keyframes grow {
+    0% { -moz-transform: scale(1); }
+    50% { -moz-transform: scale(0.5); }
+    100% { -moz-transform: scale(1); }
+}
 
+@-ms-keyframes grow {
+    0% { -ms-transform: scale(1); }
+    50% { -ms-transform: scale(0.5); }
+    100% { -ms-transform: scale(1); }
+}
 
+#mainContent .dot.active {
+    -webkit-animation-name: grow;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
 
+    /* mozilla ff */
+    -moz-animation-name: grow;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
 
-
-
-
-
-
-
-
-
+    /* microsoft ie */
+    -ms-animation-name: grow;
+    -ms-animation-duration: 2s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+}
 
