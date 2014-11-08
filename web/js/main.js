@@ -1,14 +1,17 @@
 /*
     load floor image
 */
-function loadFloor(floor=2){
+function loadFloor(floor){
+    floor = typeof floor !== 'undefined' ? floor : 2;
     $('#mainContent img').attr('src','img/maps/floor'+floor+'.svg');
 }
 
 /*
     dot position in percent to image
  */
-function drawDot(x,y,className='',name=''){
+function drawDot(x,y,className,name){
+    className = typeof className !== 'undefined' ? className : '';
+    name = typeof name !== 'undefined' ? name : '';
     $('#floorImg').append('<div class="dot '+className+'" style="left:'+x+'%;top:'+y+'%">');
 }
 
@@ -16,7 +19,8 @@ function drawDot(x,y,className='',name=''){
     beacon or photo
  */
 
-function showButton(content='photo'){
+function showButton(content){
+    content = typeof content !== 'undefined' ? content : 'photo';
     var icon;
     if(content=='photo'){
         button = '<a href="#" id="takePic"><span class="glyphicon glyphicon-camera"></span></div>';
