@@ -3,6 +3,10 @@ body {
     padding-bottom: 20px;
 }
 
+.btn-group-vertical {
+    display: block;
+}
+
 #mainContent {
     margin-bottom: 10px;
     min-height: 600px;

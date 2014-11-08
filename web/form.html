@@ -32,6 +32,11 @@
           -->
           <a class="navbar-brand" href="/">museochoix</a>
         </div>
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">English</a></li>
+              <li><a href="#">Deutsch</a></li>
+              <li><a href="#">Romansch</a></li>
+          </ul>
       </div>
     </div>
 
@@ -46,36 +51,65 @@
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-6 text-center col-xs-offset-3">
             <form id="formmuseochoix" role="form" action="museochoix://loadContexts" method="post">
                 <div class="form-group">
-                    <div class="btn-group" data-toggle="buttons">
+                    <div class="btn-group-vertical" data-toggle="buttons">
                         <label class="btn btn-lg btn-default active">
-                            <input type="radio" name="adulte" id="adulte" checked="checked">Adulte uniquement
+                            <input type="radio" name="adulte" id="adulte" checked="checked">En solo
                         </label>
                         <label class="btn btn-lg btn-default">
-                            <input type="radio" name="adulte" id="enfant">Avec enfants
+                            <input type="radio" name="adulte" id="enfant">Avec des lutins
                         </label>
                     </div>
                 </div>
                 <div class="form-group">
-                    <h3>Découvrire le musée par un biais</h3>
-                    <div id="facteurs" class="btn-group" data-toggle="buttons">
+                    <h3><span class="glyphicon glyphicon-time"></span> Quel est ta dispo ?</h3>
+                    <div id="timing" class="btn-group-vertical" data-toggle="buttons">
                         <label class="btn btn-lg btn-default">
-                            <input type="radio" name="facteurs" id="fun" value="fun">Fun
+                            <input type="radio" name="timing" id="demi" value="30">une demi heure
                         </label>
                         <label class="btn btn-lg btn-default">
-                            <input type="radio" name="facteurs" id="app" value="app">Apprentissage
+                            <input type="radio" name="timing" id="uneheure" value="60">une heure
                         </label>
                         <label class="btn btn-lg btn-default">
-                            <input type="radio" name="facteurs" id="fun" value="fun">Les couleurs
+                            <input type="radio" name="timing" id="uneheureetdemi" value="90">une heure et demi
                         </label>
                         <label class="btn btn-lg btn-default">
-                            <input type="radio" name="facteurs" id="app" value="app">Intelectuelle
+                            <input type="radio" name="timing" id="deuxheures" value="120">deux heures
                         </label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-ok"></span> Demander la visite</button>
+                <div class="form-group">
+                    <h3><span class="glyphicon glyphicon-list-alt"></span> Découvrire le musée par un biais</h3>
+                    <div id="facteurs" class="btn-group-vertical" data-toggle="buttons">
+                        <label class="btn btn-lg btn-default">
+                            <input type="radio" name="facteurs" id="fun" value="fun">Surprenez-moi!
+                        </label>
+                        <label class="btn btn-lg btn-default disabled">
+                            <input type="radio" name="facteurs" id="app" value="app">Ca bouge!
+                        </label>
+                        <label class="btn btn-lg btn-default disabled">
+                            <input type="radio" name="facteurs" id="fun" value="fun">Le dessous des oeuvres
+                        </label>
+                        <label class="btn btn-lg btn-default disabled">
+                            <input type="radio" name="facteurs" id="app" value="app">Soyons coquin
+                        </label>
+                        <label class="btn btn-lg btn-default disabled">
+                            <input type="radio" name="facteurs" id="fun" value="fun">Restons zen
+                        </label>
+                        <label class="btn btn-lg btn-default disabled">
+                            <input type="radio" name="facteurs" id="app" value="app">Evasion
+                        </label>
+                        <label class="btn btn-lg btn-default disabled">
+                            <input type="radio" name="facteurs" id="app" value="app">Meuuuuuuuhhhh
+                        </label>
+                        <label class="btn btn-lg btn-default disabled">
+                            <input type="radio" name="facteurs" id="app" value="app">Ma ville ma patrie
+                        </label>
+                    </div>
+                </div>
+                <button class="btn btn-lg btn-success">On y va <span class="glyphicon glyphicon-ok"></span></button>
             </form>
         </div>
       </div>
@@ -84,12 +118,8 @@
         <p>&copy; <a href="http://leman.museomix.ch/">museomix</a> 2014</p>
       </footer>
     </div>
-        <!-- /container -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-
+        <script src="js/vendor/jquery-1.11.1.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
-
         <script src="js/main.js"></script>
     </body>
 </html>
