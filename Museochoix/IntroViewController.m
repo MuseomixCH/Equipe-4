@@ -6,15 +6,18 @@
 //  Copyright (c) 2014 Vidinoti. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "IntroViewController.h"
 #import <VDARSDK/VDARSDK.h>
+#import "MapViewController.h"
 
-@interface ViewController ()<UIWebViewDelegate>
+@interface IntroViewController ()<UIWebViewDelegate> {
+    NSArray *ids;
+}
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
-@implementation ViewController
+@implementation IntroViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -55,22 +58,32 @@
     
     q = [q substringFromIndex:4];
     
-    NSArray * ids = [q componentsSeparatedByString:@","];
+    ids = [q componentsSeparatedByString:@","];
     
   //  [[VDARSDKController sharedInstance] unloadAllNonRootContexts];
     
-    for(NSString* _id in ids) {
+   // for(NSString* _id in ids) {
       //  [[VDARSDKController sharedInstance] loadContext:_id];
-    }
+  //  }
+    
+    
     
     [self performSegueWithIdentifier:@"showMap" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.destinationViewController isKindOfClass:[MapViewController class]]) {
+        MapViewController * ctrl = (MapViewController*)segue.destinationViewController ;
+        ctrl.allIDs = ids;
+    }
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
     NSString * url = request.URL.absoluteString;
     
-    if([url hasPrefix:@"museochoix://"]) {
+    if([url hasPrefix:@"museochoix://loadContexts"]) {
+        [self parseURL:request.URL];
                 return NO;
     }
     

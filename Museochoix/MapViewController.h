@@ -10,5 +10,6 @@
 #import <VDARSDK/VDARSDK.h>
 
 @interface MapViewController : VDARLiveAnnotationViewController
-
+@property (strong,nonatomic) NSArray* allIDs;
+-(void)loadObject:(NSString*)_id;
 @end
