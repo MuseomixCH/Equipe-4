@@ -5,6 +5,7 @@ body {
 
 #mainContent {
     margin-bottom: 10px;
+    min-height: 600px;
 }
 
 #mainContent img {

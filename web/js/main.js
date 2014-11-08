@@ -33,6 +33,11 @@ function hideMainContent(){
     $('#mainContent').html('');
 }
 
+function transparentBackground(){
+    $('html').attr('style','background:transparent;');
+    $('body').attr('style','background:transparent;');
+}
+
 $( document ).ready(function() {
     var fun = "bja43whspny60x2,knliyajr8y6x0yt,xrhnpx6pfdlquob";
     var app = "bja43whspny60x2,knliyajr8y6x0yt";
@@ -47,5 +52,11 @@ $( document ).ready(function() {
         }
         document.location = 'museochoix://loadContexts?ids='+idList;
         return false;
+    });
+
+    $(document).on('click', '#takePic', function (e) {
+        e.preventDefault();
+        hideMainContent();
+        transparentBackground();
     });
 });
