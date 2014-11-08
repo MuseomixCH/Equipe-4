@@ -41,6 +41,14 @@ function transparentBackground(){
     $('html').attr('style','background:transparent;');
     $('body').attr('style','background:transparent;');
 }
+/*
+    show image from app
+ */
+function loadPersonPicture(imgUrl){
+    if(imgUrl != undefined){
+        $('#personImg').append('<img src="'+imgUrl+'">')
+    }
+}
 
 $( document ).ready(function() {
     var idList = ["bja43whspny60x2","knliyajr8y6x0yt","xrhnpx6pfdlquob"];
