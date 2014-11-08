@@ -98,6 +98,7 @@
     
     if(lines.count<4) {
         NSLog(@"Invalid description for the museum object %@",context.remoteID);
+        return;
     }
     
     //First line is floor
