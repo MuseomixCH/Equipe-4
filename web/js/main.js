@@ -70,9 +70,9 @@ $( document ).ready(function() {
         if($('#timing .active input').val() == '30'){
             theList = idList.slice(0, 1);
         }else if($('#timing .active input').val() == '60'){
-            theList = idList.slice(0, 3);
+            theList = idList.slice(0, 2);
         }else if($('#timing .active input').val() == '90'){
-            theList = idList.slice(0, 5);
+            theList = idList.slice(0, 3);
         }else{
             theList = idList;
         }
