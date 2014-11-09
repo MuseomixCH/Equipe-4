@@ -24,7 +24,7 @@ function showButton(content){
     var icon;
     if(content=='photo'){
         topButton = '<h3 class="text-center">Rends-toi au point actif</h3>';
-        button = '<a href="#" id="takePic"><h4>Scanner l\'oeuvre</h4><img alt="" src="img/picto_photo3.png"></a>';
+        button = '<a href="#" id="takePic"><h4>Active l\'appareil photo et scanne l\'oeuvre</h4><img alt="" src="img/picto_photo3.png"></a>';
     }else{
         button = '<span class="glyphicon glyphicon-fullscreen"></span>';
     }
