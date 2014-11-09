@@ -27,6 +27,7 @@
 
 /** The receiver of the camera frames */
 @property (nonatomic,assign) id<VDARImageReceiver> imageReceiver;
+@property (nonatomic) BOOL useFront;
 
 /**
  The frame rate of the camera.

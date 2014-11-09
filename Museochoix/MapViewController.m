@@ -7,8 +7,14 @@
 //
 
 #import "MapViewController.h"
+#import "MyCameraImageSource.h"
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface MapViewController ()<UIWebViewDelegate> {
+@interface VDARModelManager()
+-(void)clearCurrentDetection;
+@end
+
+@interface MapViewController ()<UIWebViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate> {
     NSString *_floor;
     int coordX,coordY;
     NSString *screenType;
@@ -169,18 +175,8 @@
         [self.view addSubview:targetView];
     }
     
-#if TARGET_IPHONE_SIMULATOR
-    btnBlack = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    
-    btnBlack.frame=CGRectMake(self.view.frame.size.width-10-120,10+statusBar,120,40);
-    
-    [btnBlack addTarget:self action:@selector(blackFrame:) forControlEvents:UIControlEventTouchUpInside];
-    btnBlack.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
-    [self.view addSubview:btnBlack];
-#endif
-    
 
-    
+    lblInstruction.text=@"Pointe ta tablette vers l'oeuvre";
     
     
     
@@ -245,6 +241,7 @@
 }
 
 -(void)nextscreen {
+    
     currentIndex++;
     if(currentIndex<self.allIDs.count) {
         currentID = self.allIDs[currentIndex];
@@ -257,6 +254,16 @@
 -(void)annotationViewDidBecomeEmpty {
   //  self.webView.hidden=NO;
     targetView.hidden=NO;
+    
+    if(currentIndex<self.allIDs.count) {
+        NSString *_id=[self.allIDs objectAtIndex:currentIndex];
+        VDARModel *m = [[VDARModelManager sharedInstance] modelForRemoteID:_id];
+
+        if(m && [m.remoteID isEqualToString:@"bja43whspny60x2"]) {
+            [self lutte];
+        }
+    }
+    
     [self nextscreen];
 }
 
@@ -270,7 +277,23 @@
     NSLog(@"Loading object %@",_id);
     
     VDARModel *context  = [[VDARModelManager sharedInstance] modelForRemoteID:_id];
-    [self objectParser:context];
+   /*
+    NSArray *modelIDS = [VDARModelManager sharedInstance].allModelsIDs;
+    
+    for(NSNumber *n in modelIDS) {
+        VDARModel * m = [[VDARModelManager sharedInstance] loadModel:[n unsignedIntegerValue]];
+        if(m) {
+            if([m isEqual:context])
+                m.modelIgnored = NO;
+            else
+                m.modelIgnored = YES;
+        }
+    }
+
+    */
+    
+    
+    [self objectParser:context addPoint:YES];
     
     //Show map
     NSString * file = [[NSBundle mainBundle] pathForResource:@"map.html" ofType:@"" inDirectory:@"web"];
@@ -281,18 +304,21 @@
     NSURL *url = [NSURL fileURLWithPath:file];
  
     mapShown=YES;
-    
+
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
-
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    ((MyCameraImageSource*)[VDARModelManager sharedInstance].imageSender).useFront=NO;
+}
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     
-    if(currentID) {
+    /*if(currentID) {
         currentIndex++;
-    }
+    }*/
     currentID = self.allIDs[currentIndex];
     [self loadObject:currentID];
 }
@@ -305,7 +331,7 @@
     
 }
 
--(void)objectParser:(VDARModel*)context {
+-(void)objectParser:(VDARModel*)context addPoint:(BOOL)add {
     NSString *descr = context.modelDescription;
     
     NSArray * lines = [descr componentsSeparatedByString:@"\n"];
@@ -333,11 +359,65 @@
     
     screenType = lines[2];
     
+    if(add)
     [oldPoints addObject:@[[NSNumber numberWithInt:coordX], [NSNumber numberWithInt:coordY]]];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    
+ 
+    
+    NSURL *videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
+    
+    NSData *videoData = [NSData dataWithContentsOfURL:videoURL];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *tempPath = [documentsDirectory stringByAppendingPathComponent:@"last.mp4"];
+    
+    [videoData writeToFile:tempPath atomically:NO];
+    
+    MPMoviePlayerViewController * view = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL fileURLWithPath:[documentsDirectory stringByAppendingPathComponent:@"previous.mp4"]]];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [self presentModalViewController:view animated:YES];
+    }];
+    
+    
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+}
+
+-(void)lutte{
+
+
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *tempPath = [documentsDirectory stringByAppendingPathComponent:@"last.mp4"];
+    
+    [[NSFileManager defaultManager] moveItemAtPath:tempPath toPath:[documentsDirectory stringByAppendingPathComponent:@"previous.mp4"] error:nil];
+    
+    UIImagePickerController *videoRecorder = [[UIImagePickerController alloc] init];
+    videoRecorder.sourceType = UIImagePickerControllerSourceTypeCamera;
+    videoRecorder.delegate = self;
+    
+    NSArray *mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+    NSArray *videoMediaTypesOnly = [mediaTypes filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(SELF contains %@)", @"movie"]];
+    
+    videoRecorder.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+    
+    videoRecorder.mediaTypes = videoMediaTypesOnly;
+    videoRecorder.videoQuality = UIImagePickerControllerQualityTypeMedium;
+    videoRecorder.videoMaximumDuration = 30;			//Specify in seconds (600 is default)
+ 
+    [self presentModalViewController:videoRecorder animated:YES];
+   // [videoRecorder release];
 }
 
 -(void)modelDetected:(VDARModel *)model {
     [super modelDetected:model];
+    
+    [self objectParser:model addPoint:NO];
     
     NSString *html = [NSString stringWithFormat:@"%@.html",screenType];
     NSString * file = [[NSBundle mainBundle] pathForResource:html ofType:@"" inDirectory:@"web"];
@@ -347,10 +427,48 @@
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:file]]];
     mapShown = NO;
     
+    if([model.remoteID isEqualToString:@"8oo2l8fk3pdlzy6"]) {
+        //Switch camera
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(18 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            ((MyCameraImageSource*)[VDARModelManager sharedInstance].imageSender).useFront=YES;
+           // ((MyCameraImageSource*)[VDARModelManager sharedInstance].imageSender).
+            [((MyCameraImageSource*)[VDARModelManager sharedInstance].imageSender) stopImageStream];
+            [((MyCameraImageSource*)[VDARModelManager sharedInstance].imageSender) startImageStream];
+            
+        });
+       
+    }
+    
 }
 
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return interfaceOrientation==UIInterfaceOrientationPortrait;
+}
+
+//Only on iOS 6
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+//Only on iOS 6
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+
 -(void)showFinalScreen {
+    NSString * file = [[NSBundle mainBundle] pathForResource:@"end.html" ofType:@"" inDirectory:@"web"];
+    if(!file) {
+        NSLog(@"Error while loading map screen.");
+        return;
+    }
+    NSURL *url = [NSURL fileURLWithPath:file];
     
+    mapShown=NO;
+    
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+
 }
 
 -(void)modelLost:(VDARModel*)model {
@@ -363,10 +481,15 @@
     NSString * url = request.URL.absoluteString;
     
     if([url hasPrefix:@"museochoix://next"]) {
+        [[VDARModelManager sharedInstance] stopAugmentedRealityContent];
         [self nextscreen];
    
         return NO;
-    }
+    } else if([url hasPrefix:@"museochoix://intro"]) {
+        [self.navigationController popViewControllerAnimated:YES];
+        
+            return NO;
+        }
     
     return YES;
 

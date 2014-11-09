@@ -338,7 +338,7 @@ static void releaseCallBack( void *releaseRefCon, const void *dataPtr, size_t da
     NSArray *allDevices=[AVCaptureDevice devices];
     
     for(AVCaptureDevice *dev in allDevices) {
-        if(dev.position==AVCaptureDevicePositionBack) {
+        if((self.useFront && dev.position==AVCaptureDevicePositionFront) || (!self.useFront && dev.position==AVCaptureDevicePositionBack)) {
 #if !__has_feature(objc_arc)
             [videoDevice release];
             videoDevice=[dev retain];

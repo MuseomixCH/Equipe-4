@@ -24,15 +24,25 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationController.navigationBarHidden=YES;
 }
-
+-(BOOL)shouldAutorotate {
+    return NO;
+}
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     //Synchro
-    [[VDARRemoteController sharedInstance] syncRemoteModelsAsynchronouslyWithPriors:@[ [VDARTagPrior tagWithName:@"museomix"] ] withCompletionBlock:^(id result, NSError *err) {
-        NSLog(@"Synced %lu models",((NSArray*)result).count);
+    [[VDARModelManager sharedInstance].afterLoadingQueue addOperationWithBlock:^{
+       dispatch_async(dispatch_get_main_queue(), ^{
+           [[VDARRemoteController sharedInstance] syncRemoteModelsAsynchronouslyWithPriors:@[ [VDARTagPrior tagWithName:@"museomix"] ] withCompletionBlock:^(id result, NSError *err) {
+               NSLog(@"Synced %lu models",((NSArray*)result).count);
+           }];
+       });
     }];
+   
     
     //[self parseURL:[NSURL URLWithString:@"museomix://loadContexts?ids=bja43whspny60x2,knliyajr8y6x0yt,xrhnpx6pfdlquob"]];
     
