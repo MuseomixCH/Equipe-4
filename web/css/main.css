@@ -105,3 +105,7 @@ body {
 #mainContent .contentIcon {
     width: 150px;
 }
+
+#end #mainContent img {
+    margin-top: 100px;
+}
