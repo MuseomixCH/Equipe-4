@@ -23,10 +23,12 @@ function showButton(content){
     content = typeof content !== 'undefined' ? content : 'photo';
     var icon;
     if(content=='photo'){
-        button = '<h3 class="text-center">Rendez-vous au point actif</h3><a href="#" id="takePic"><img alt="" src="img/picto_photo3.png"><h4>Scanner l\'oeuvre</h4></a>';
+        topButton = '<h3 class="text-center">Rends-toi au point actif</h3>';
+        button = '<a href="#" id="takePic"><img alt="" src="img/picto_photo3.png"><h4>Scanner l\'oeuvre</h4></a>';
     }else{
         button = '<span class="glyphicon glyphicon-fullscreen"></span>';
     }
+    $('#topContent').html(topButton);
     $('#subContent').html('<div class="actionBtn">'+button+'</div>');
 }
 
