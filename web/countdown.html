@@ -18,16 +18,29 @@
             font-size: 30em;
             padding-bottom: 20px;
         }
+        table {
+            position:fixed;
+            margin-left:-150px; /* half of width */
+            margin-top:-20%;  /* half of height */
+            top:50%;
+            left:50%;
+        }
+        table th
+        {
+            text-align: center;
+            vertical-align: middle;
+
+        }
     </style>
 </head>
 <body>
-<div style="position: absolute; left: 50%; height: 100%;">
-    <div style="position: relative; left: -50%; display: table; height: 100%;">
-        <div style="display: table-cell; vertical-align: middle;">
+<table>
+    <tr>
+        <th>
             <span id="timer" class="timer timerfront">00</span>
-        </div>
-    </div>
-</div>
+        </th>
+    </tr>
+</table>
 <script>
     var count = 900;
     var counter = setInterval(timer, 10);
