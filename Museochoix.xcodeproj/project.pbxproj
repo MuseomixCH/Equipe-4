@@ -15,7 +15,6 @@
 		4E0C355C1A0E4E4A00507E4B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C355A1A0E4E4A00507E4B /* LaunchScreen.xib */; };
 		4E0C35681A0E4E4A00507E4B /* MuseochoixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C35671A0E4E4A00507E4B /* MuseochoixTests.m */; };
 		4E0C35731A0E51DE00507E4B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C35721A0E51DE00507E4B /* MapViewController.m */; };
-		4E0C35751A0E530800507E4B /* VDARSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35741A0E530800507E4B /* VDARSDK.framework */; };
 		4E0C35781A0E532B00507E4B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35771A0E532B00507E4B /* AVFoundation.framework */; };
 		4E0C357A1A0E533000507E4B /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35791A0E533000507E4B /* CoreBluetooth.framework */; };
 		4E0C35841A0E537300507E4B /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C357B1A0E537300507E4B /* CoreImage.framework */; };
@@ -36,6 +35,19 @@
 		4E0C359A1A0E53D800507E4B /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35991A0E53D800507E4B /* libicucore.dylib */; };
 		4E0C359D1A0E549100507E4B /* MyCameraImageSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0C359C1A0E549100507E4B /* MyCameraImageSource.m */; };
 		4E0C35CC1A0E5FC500507E4B /* web in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35CB1A0E5FC500507E4B /* web */; };
+		4E0C35CE1A0F61AB00507E4B /* VDARSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0C35CD1A0F61AB00507E4B /* VDARSDK.framework */; };
+		4E0C35D31A0F6A8D00507E4B /* camOverlay_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35CF1A0F6A8D00507E4B /* camOverlay_iPad.png */; };
+		4E0C35D41A0F6A8D00507E4B /* camOverlay_iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35D01A0F6A8D00507E4B /* camOverlay_iPad@2x.png */; };
+		4E0C35D51A0F6A8D00507E4B /* camOverlay_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35D11A0F6A8D00507E4B /* camOverlay_iPhone.png */; };
+		4E0C35D61A0F6A8D00507E4B /* camOverlay_iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35D21A0F6A8D00507E4B /* camOverlay_iPhone@2x.png */; };
+		4E0C35DF1A0F6B2E00507E4B /* target_corner_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35D71A0F6B2E00507E4B /* target_corner_1.png */; };
+		4E0C35E01A0F6B2E00507E4B /* target_corner_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35D81A0F6B2E00507E4B /* target_corner_1@2x.png */; };
+		4E0C35E11A0F6B2E00507E4B /* target_corner_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35D91A0F6B2E00507E4B /* target_corner_2.png */; };
+		4E0C35E21A0F6B2E00507E4B /* target_corner_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35DA1A0F6B2E00507E4B /* target_corner_2@2x.png */; };
+		4E0C35E31A0F6B2E00507E4B /* target_corner_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35DB1A0F6B2E00507E4B /* target_corner_3.png */; };
+		4E0C35E41A0F6B2E00507E4B /* target_corner_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35DC1A0F6B2E00507E4B /* target_corner_3@2x.png */; };
+		4E0C35E51A0F6B2E00507E4B /* target_corner_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35DD1A0F6B2E00507E4B /* target_corner_4.png */; };
+		4E0C35E61A0F6B2E00507E4B /* target_corner_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35DE1A0F6B2E00507E4B /* target_corner_4@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +76,6 @@
 		4E0C35671A0E4E4A00507E4B /* MuseochoixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuseochoixTests.m; sourceTree = "<group>"; };
 		4E0C35711A0E51DE00507E4B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		4E0C35721A0E51DE00507E4B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		4E0C35741A0E530800507E4B /* VDARSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VDARSDK.framework; path = "../../../Development/ContextualSDK/build/Release-universalpublic/VDARSDK.framework"; sourceTree = "<group>"; };
 		4E0C35771A0E532B00507E4B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4E0C35791A0E533000507E4B /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		4E0C357B1A0E537300507E4B /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -86,6 +97,19 @@
 		4E0C359B1A0E549100507E4B /* MyCameraImageSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCameraImageSource.h; sourceTree = "<group>"; };
 		4E0C359C1A0E549100507E4B /* MyCameraImageSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCameraImageSource.m; sourceTree = "<group>"; };
 		4E0C35CB1A0E5FC500507E4B /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = SOURCE_ROOT; };
+		4E0C35CD1A0F61AB00507E4B /* VDARSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VDARSDK.framework; sourceTree = "<group>"; };
+		4E0C35CF1A0F6A8D00507E4B /* camOverlay_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camOverlay_iPad.png; sourceTree = "<group>"; };
+		4E0C35D01A0F6A8D00507E4B /* camOverlay_iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camOverlay_iPad@2x.png"; sourceTree = "<group>"; };
+		4E0C35D11A0F6A8D00507E4B /* camOverlay_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camOverlay_iPhone.png; sourceTree = "<group>"; };
+		4E0C35D21A0F6A8D00507E4B /* camOverlay_iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camOverlay_iPhone@2x.png"; sourceTree = "<group>"; };
+		4E0C35D71A0F6B2E00507E4B /* target_corner_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target_corner_1.png; sourceTree = "<group>"; };
+		4E0C35D81A0F6B2E00507E4B /* target_corner_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "target_corner_1@2x.png"; sourceTree = "<group>"; };
+		4E0C35D91A0F6B2E00507E4B /* target_corner_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target_corner_2.png; sourceTree = "<group>"; };
+		4E0C35DA1A0F6B2E00507E4B /* target_corner_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "target_corner_2@2x.png"; sourceTree = "<group>"; };
+		4E0C35DB1A0F6B2E00507E4B /* target_corner_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target_corner_3.png; sourceTree = "<group>"; };
+		4E0C35DC1A0F6B2E00507E4B /* target_corner_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "target_corner_3@2x.png"; sourceTree = "<group>"; };
+		4E0C35DD1A0F6B2E00507E4B /* target_corner_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target_corner_4.png; sourceTree = "<group>"; };
+		4E0C35DE1A0F6B2E00507E4B /* target_corner_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "target_corner_4@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0C35CE1A0F61AB00507E4B /* VDARSDK.framework in Frameworks */,
 				4E0C359A1A0E53D800507E4B /* libicucore.dylib in Frameworks */,
 				4E0C35981A0E53D400507E4B /* Accelerate.framework in Frameworks */,
 				4E0C35961A0E53CD00507E4B /* MediaPlayer.framework in Frameworks */,
@@ -111,7 +136,6 @@
 				4E0C358C1A0E537300507E4B /* Twitter.framework in Frameworks */,
 				4E0C357A1A0E533000507E4B /* CoreBluetooth.framework in Frameworks */,
 				4E0C35781A0E532B00507E4B /* AVFoundation.framework in Frameworks */,
-				4E0C35751A0E530800507E4B /* VDARSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +171,18 @@
 		4E0C354A1A0E4E4A00507E4B /* Museochoix */ = {
 			isa = PBXGroup;
 			children = (
+				4E0C35D71A0F6B2E00507E4B /* target_corner_1.png */,
+				4E0C35D81A0F6B2E00507E4B /* target_corner_1@2x.png */,
+				4E0C35D91A0F6B2E00507E4B /* target_corner_2.png */,
+				4E0C35DA1A0F6B2E00507E4B /* target_corner_2@2x.png */,
+				4E0C35DB1A0F6B2E00507E4B /* target_corner_3.png */,
+				4E0C35DC1A0F6B2E00507E4B /* target_corner_3@2x.png */,
+				4E0C35DD1A0F6B2E00507E4B /* target_corner_4.png */,
+				4E0C35DE1A0F6B2E00507E4B /* target_corner_4@2x.png */,
+				4E0C35CF1A0F6A8D00507E4B /* camOverlay_iPad.png */,
+				4E0C35D01A0F6A8D00507E4B /* camOverlay_iPad@2x.png */,
+				4E0C35D11A0F6A8D00507E4B /* camOverlay_iPhone.png */,
+				4E0C35D21A0F6A8D00507E4B /* camOverlay_iPhone@2x.png */,
 				4E0C35CB1A0E5FC500507E4B /* web */,
 				4E0C35761A0E531D00507E4B /* Framework */,
 				4E0C354F1A0E4E4A00507E4B /* AppDelegate.h */,
@@ -161,7 +197,7 @@
 				4E0C354B1A0E4E4A00507E4B /* Supporting Files */,
 				4E0C35711A0E51DE00507E4B /* MapViewController.h */,
 				4E0C35721A0E51DE00507E4B /* MapViewController.m */,
-				4E0C35741A0E530800507E4B /* VDARSDK.framework */,
+				4E0C35CD1A0F61AB00507E4B /* VDARSDK.framework */,
 			);
 			path = Museochoix;
 			sourceTree = "<group>";
@@ -297,8 +333,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E0C35571A0E4E4A00507E4B /* Main.storyboard in Resources */,
+				4E0C35E31A0F6B2E00507E4B /* target_corner_3.png in Resources */,
+				4E0C35E41A0F6B2E00507E4B /* target_corner_3@2x.png in Resources */,
+				4E0C35D41A0F6A8D00507E4B /* camOverlay_iPad@2x.png in Resources */,
+				4E0C35E01A0F6B2E00507E4B /* target_corner_1@2x.png in Resources */,
+				4E0C35E61A0F6B2E00507E4B /* target_corner_4@2x.png in Resources */,
+				4E0C35E21A0F6B2E00507E4B /* target_corner_2@2x.png in Resources */,
+				4E0C35D61A0F6A8D00507E4B /* camOverlay_iPhone@2x.png in Resources */,
+				4E0C35D31A0F6A8D00507E4B /* camOverlay_iPad.png in Resources */,
+				4E0C35DF1A0F6B2E00507E4B /* target_corner_1.png in Resources */,
 				4E0C35CC1A0E5FC500507E4B /* web in Resources */,
+				4E0C35E51A0F6B2E00507E4B /* target_corner_4.png in Resources */,
 				4E0C355C1A0E4E4A00507E4B /* LaunchScreen.xib in Resources */,
+				4E0C35D51A0F6A8D00507E4B /* camOverlay_iPhone.png in Resources */,
+				4E0C35E11A0F6B2E00507E4B /* target_corner_2.png in Resources */,
 				4E0C35591A0E4E4A00507E4B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,7 +498,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/mathieu/Development/ContextualSDK/build/Release-universalpublic",
+					"$(PROJECT_DIR)/Museochoix",
 				);
 				INFOPLIST_FILE = Museochoix/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -466,7 +514,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/mathieu/Development/ContextualSDK/build/Release-universalpublic",
+					"$(PROJECT_DIR)/Museochoix",
 				);
 				INFOPLIST_FILE = Museochoix/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
