@@ -68,7 +68,7 @@ $( document ).ready(function() {
     $('#formmuseochoix').submit(function(e) {
         e.preventDefault();
         if($('#timing .active input').val() == '30'){
-            theList = idList.slice(0, 1);
+            var theList = idList[Math.floor(Math.random() * idList.length)];
         }else if($('#timing .active input').val() == '60'){
             theList = idList.slice(0, 2);
         }else if($('#timing .active input').val() == '90'){
