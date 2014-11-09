@@ -94,7 +94,7 @@ body {
     display: none;
 }
 
-#audio .glyphicon-headphones {
-    position: absolute;
-    top: 30%;
+#audio #mainContent {
+    text-align: center;
+    padding-top: 25%;
 }
