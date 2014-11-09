@@ -33,15 +33,10 @@ body {
 }
 
 #subContent .actionBtn {
-    width: 150px;
-    height: 150px;
-    background: #EE0000;
-    border-radius: 50%;
     margin: 0 auto;
     text-align: center;
-    font-size: 6em;
-    line-height: 2em;
     color: #000000;
+    height: 120px;
 }
 
 #subContent .actionBtn a {
@@ -97,4 +92,15 @@ body {
 #audio #mainContent {
     text-align: center;
     padding-top: 25%;
+}
+
+#subContent h4 {
+    color: #00BDE8;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#mainContent .contentIcon {
+    width: 150px;
 }

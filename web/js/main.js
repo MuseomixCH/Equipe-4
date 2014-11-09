@@ -23,7 +23,7 @@ function showButton(content){
     content = typeof content !== 'undefined' ? content : 'photo';
     var icon;
     if(content=='photo'){
-        button = '<a href="#" id="takePic"><span class="glyphicon glyphicon-camera"></span></div>';
+        button = '<a href="#" id="takePic"><img alt="" src="img/picto_photo3.png"><h4>Scanner l\'oeuvre</h4></a>';
     }else{
         button = '<span class="glyphicon glyphicon-fullscreen"></span>';
     }
@@ -84,4 +84,6 @@ $( document ).ready(function() {
         transparentBackground();
         $('#subContent').html();
     });
+
+    showButton();
 });
