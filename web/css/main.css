@@ -21,7 +21,7 @@ body {
 }
 
 #mainContent .dot {
-    background: red;
+    background: #888888;
     border-radius: 50%;
     width: 4%;
     height: 4%;
@@ -67,6 +67,7 @@ body {
 }
 
 #mainContent .dot.active {
+    background: #FF0000;
     -webkit-animation-name: grow;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
@@ -83,5 +84,9 @@ body {
     -ms-animation-duration: 2s;
     -ms-animation-iteration-count: infinite;
     -ms-animation-timing-function: linear;
+}
+
+#image #subContent * {
+    display: none;
 }
 

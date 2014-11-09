@@ -50,6 +50,13 @@ function loadPersonPicture(imgUrl){
     }
 }
 
+/*
+    display all divs in the subContent
+*/
+function showSubContent(){
+    $('#subContent').children().show();
+}
+
 $.urlParam = function(name){
     var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
     if (results==null){
@@ -83,4 +90,6 @@ $( document ).ready(function() {
         hideMainContent();
         transparentBackground();
     });
+
+    showSubContent();
 });
