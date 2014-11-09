@@ -87,7 +87,4 @@ $( document ).ready(function() {
         $('#topContent').html('');
         $('#subContent').html('');
     });
-
-    drawDot(10,10);
-    drawDot(0,0, 'active');
 });
