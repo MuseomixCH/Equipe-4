@@ -386,14 +386,21 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     
+    
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *tempPath = [documentsDirectory stringByAppendingPathComponent:@"last.mp4"];
+    
+    [[NSFileManager defaultManager] moveItemAtPath:tempPath toPath:[documentsDirectory stringByAppendingPathComponent:@"previous.mp4"] error:nil];
+
  
     
     NSURL *videoURL = [info objectForKey:UIImagePickerControllerMediaURL];
     
     NSData *videoData = [NSData dataWithContentsOfURL:videoURL];
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *tempPath = [documentsDirectory stringByAppendingPathComponent:@"last.mp4"];
+   
+    tempPath = [documentsDirectory stringByAppendingPathComponent:@"last.mp4"];
     
     [videoData writeToFile:tempPath atomically:NO];
     NSString * prev = [documentsDirectory stringByAppendingPathComponent:@"previous.mp4"];
@@ -403,23 +410,16 @@
             [self presentModalViewController:view animated:YES];
         }];
     } else {
-        [picker dismissMoviePlayerViewControllerAnimated];
+        [picker dismissViewControllerAnimated:YES completion:nil];
     }
     
     
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)lutte{
-
-
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *tempPath = [documentsDirectory stringByAppendingPathComponent:@"last.mp4"];
-    
-    [[NSFileManager defaultManager] moveItemAtPath:tempPath toPath:[documentsDirectory stringByAppendingPathComponent:@"previous.mp4"] error:nil];
     
     UIImagePickerController *videoRecorder = [[UIImagePickerController alloc] init];
     videoRecorder.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -518,8 +518,7 @@
     
     if([url hasPrefix:@"museochoix://next"]) {
         [[VDARModelManager sharedInstance] stopAugmentedRealityContent];
-        [self nextscreen];
-   
+        
         return NO;
     } else if([url hasPrefix:@"museochoix://intro"]) {
         [self.navigationController popViewControllerAnimated:YES];
