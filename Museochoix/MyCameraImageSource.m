@@ -13,7 +13,7 @@
 
 #if TARGET_IPHONE_SIMULATOR || defined(USE_FIXED_IMAGE)
 
-static NSString* imageForSimulatorCamera=@"http://armanager.vidinoti.com/images/beatles.jpg";
+static NSString* imageForSimulatorCamera=@"http://armanager.vidinoti.com/api/api.php?getImage=8oo2l8fk3pdlzy6";
 
 
 
@@ -458,7 +458,7 @@ static void releaseCallBack( void *releaseRefCon, const void *dataPtr, size_t da
         if([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
             captureSession.sessionPreset = AVCaptureSessionPreset640x480; //For future use: AVCaptureSessionPreset1280x720
         } else {
-            UIDevicePlatform plat= [VDARSDKController platformType];
+            UIDevicePlatform plat= [VDARModelManager platformType];
             
             
             switch(plat) {

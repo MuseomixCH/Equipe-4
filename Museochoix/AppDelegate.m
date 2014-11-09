@@ -21,22 +21,23 @@
     
     NSString *modelDir=[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"models"];
     
-    if(![VDARSDKController startSDK:modelDir withLicenseKey:@"698s5w7llqmk7qewoj83"]) {
-        if(![VDARSDKController sharedInstance]) {
+    unsigned long featureRight= kVDARRightInsertNewModel | kVDARRightRemoteModelFetch | kVDARRightSendVisualClickNotifications | kVDARRightImageRecognition | kVDARRightAnnotationJSRendering;
+    if(![VDARModelManager startManager:modelDir withFeatureRights:featureRight andLicenseKey:@"698s5w7llqmk7qewoj83"]) {
+        if(![VDARModelManager sharedInstance]) {
             NSLog(@"Error while loading the model manager. Fatal.");
-            UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:@"Vidinoti AR SDK Error" message:@"Error while starting the AR SDK Manager." delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            UIAlertView *alertView=[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Application error",@"") message:NSLocalizedString(@"Unable to launch augmented reality system.",@"") delegate:nil cancelButtonTitle:NSLocalizedString(@"OK",@"Button for clausing error alert box") otherButtonTitles:nil];
             [alertView show];
         }
     }
     
-    [VDARSDKController sharedInstance].enableCodesRecognition=YES;
+    [VDARModelManager sharedInstance].enableCodesRecognition=YES;
     
     MyCameraImageSource *cameraSource=[[MyCameraImageSource alloc] init];
     
-    [VDARSDKController sharedInstance].imageSender=cameraSource;
+    [VDARModelManager sharedInstance].imageSender=cameraSource;
 
     
-    [[VDARSDKController sharedInstance] application:application didReceiveRemoteNotification:launchOptions];
+    [[VDARModelManager sharedInstance] application:application didReceiveRemoteNotification:launchOptions];
 
     
     // Override point for customization after application launch.
@@ -46,7 +47,7 @@
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    [[VDARSDKController sharedInstance] save];
+    [[VDARModelManager sharedInstance] saveModels];
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }

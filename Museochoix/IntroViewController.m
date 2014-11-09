@@ -61,10 +61,10 @@
     
     ids = [q componentsSeparatedByString:@","];
     
-  //  [[VDARSDKController sharedInstance] unloadAllNonRootContexts];
+  //  [[VDARModelManager sharedInstance] unloadAllNonRootContexts];
     
    // for(NSString* _id in ids) {
-      //  [[VDARSDKController sharedInstance] loadContext:_id];
+      //  [[VDARModelManager sharedInstance] loadContext:_id];
   //  }
     
     
