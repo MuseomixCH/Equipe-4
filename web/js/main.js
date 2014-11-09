@@ -84,6 +84,7 @@ $( document ).ready(function() {
         e.preventDefault();
         hideMainContent();
         transparentBackground();
+        $('#topContent').html('');
         $('#subContent').html('');
     });
 });
