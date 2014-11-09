@@ -30,6 +30,8 @@
         }
     }
     
+    application.statusBarHidden=YES;
+    
     [VDARModelManager sharedInstance].enableCodesRecognition=YES;
     
     MyCameraImageSource *cameraSource=[[MyCameraImageSource alloc] init];

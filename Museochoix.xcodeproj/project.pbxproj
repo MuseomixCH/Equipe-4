@@ -48,6 +48,7 @@
 		4E0C35E41A0F6B2E00507E4B /* target_corner_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35DC1A0F6B2E00507E4B /* target_corner_3@2x.png */; };
 		4E0C35E51A0F6B2E00507E4B /* target_corner_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35DD1A0F6B2E00507E4B /* target_corner_4.png */; };
 		4E0C35E61A0F6B2E00507E4B /* target_corner_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35DE1A0F6B2E00507E4B /* target_corner_4@2x.png */; };
+		4E0C35E81A0F9A5000507E4B /* lutte.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35E71A0F9A5000507E4B /* lutte.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		4E0C35DC1A0F6B2E00507E4B /* target_corner_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "target_corner_3@2x.png"; sourceTree = "<group>"; };
 		4E0C35DD1A0F6B2E00507E4B /* target_corner_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target_corner_4.png; sourceTree = "<group>"; };
 		4E0C35DE1A0F6B2E00507E4B /* target_corner_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "target_corner_4@2x.png"; sourceTree = "<group>"; };
+		4E0C35E71A0F9A5000507E4B /* lutte.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lutte.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		4E0C354A1A0E4E4A00507E4B /* Museochoix */ = {
 			isa = PBXGroup;
 			children = (
+				4E0C35E71A0F9A5000507E4B /* lutte.mp3 */,
 				4E0C35D71A0F6B2E00507E4B /* target_corner_1.png */,
 				4E0C35D81A0F6B2E00507E4B /* target_corner_1@2x.png */,
 				4E0C35D91A0F6B2E00507E4B /* target_corner_2.png */,
@@ -301,6 +304,7 @@
 				TargetAttributes = {
 					4E0C35471A0E4E4A00507E4B = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = WV2739QU9V;
 					};
 					4E0C35601A0E4E4A00507E4B = {
 						CreatedOnToolsVersion = 6.1;
@@ -348,6 +352,7 @@
 				4E0C35D51A0F6A8D00507E4B /* camOverlay_iPhone.png in Resources */,
 				4E0C35E11A0F6B2E00507E4B /* target_corner_2.png in Resources */,
 				4E0C35591A0E4E4A00507E4B /* Images.xcassets in Resources */,
+				4E0C35E81A0F9A5000507E4B /* lutte.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
