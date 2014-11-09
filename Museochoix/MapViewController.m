@@ -264,12 +264,23 @@
         }
     }
     
+    self.webView.userInteractionEnabled=YES;
+    
     [self nextscreen];
 }
 
 -(void)annotationViewDidPresentAnnotations {
   //  self.webView.hidden=YES;
     targetView.hidden=YES;
+    
+    if(currentIndex<self.allIDs.count) {
+        NSString *_id=[self.allIDs objectAtIndex:currentIndex];
+        VDARModel *m = [[VDARModelManager sharedInstance] modelForRemoteID:_id];
+        
+        if(m && [m.remoteID isEqualToString:@"8oo2l8fk3pdlzy6"]) {
+            self.webView.userInteractionEnabled=NO;
+        }
+    }
 }
 
 -(void)loadObject:(NSString *)_id {
@@ -277,7 +288,7 @@
     NSLog(@"Loading object %@",_id);
     
     VDARModel *context  = [[VDARModelManager sharedInstance] modelForRemoteID:_id];
-   /*
+   
     NSArray *modelIDS = [VDARModelManager sharedInstance].allModelsIDs;
     
     for(NSNumber *n in modelIDS) {
@@ -290,7 +301,7 @@
         }
     }
 
-    */
+    
     
     
     [self objectParser:context addPoint:YES];
@@ -319,8 +330,15 @@
     /*if(currentID) {
         currentIndex++;
     }*/
-    currentID = self.allIDs[currentIndex];
-    [self loadObject:currentID];
+    
+    if(currentIndex<self.allIDs.count) {
+        
+        currentID = self.allIDs[currentIndex];
+        [self loadObject:currentID];
+    } else {
+        [self showFinalScreen];
+    }
+
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -350,10 +368,12 @@
     
     if(xy.count!=2) {
         NSLog(@"Invalid coordinates.");
+    } else {
+        
+        coordX=[xy[0] integerValue];
+        coordY=[xy[1] integerValue];
+        
     }
-    
-    coordX=[xy[0] integerValue];
-    coordY=[xy[1] integerValue];
     
     isAR = [lines[3] boolValue];
     
@@ -503,7 +523,9 @@
         /* all points */
         int nb=0;
         for(NSArray * arr in oldPoints) {
-            [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"drawDot(%@,%@,'%@')",arr[0],arr[1],nb==oldPoints.count-1 ? @"active":@""]];
+            if(arr.count>=2) {
+                [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"drawDot(%@,%@,'%@')",arr[0],arr[1],nb==oldPoints.count-1 ? @"active":@""]];
+            }
             nb++;
         }
         
