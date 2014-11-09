@@ -11,19 +11,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <style>
         body {
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
             background-color: rgba(255, 255, 255, 0.5);
         }
-        #timeBlock {
-            font-size: 10em;
-            left: 50%;
-            position: fixed;
+        #timer{
+            font-size: 30em;
+            padding-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <div id="timeBlock" class="row">
-        <span id="Timer" class="timer timerfront">60:00</span>
+<div style="position: absolute; left: 50%; height: 100%;">
+    <div style="position: relative; left: -50%; display: table; height: 100%;">
+        <div style="display: table-cell; vertical-align: middle;">
+            <span id="timer" class="timer timerfront">00</span>
+        </div>
     </div>
+</div>
 <script>
     var count = 900;
     var counter = setInterval(timer, 10);
@@ -36,7 +40,7 @@
             return;
         }
         count--;
-        document.getElementById("Timer").innerHTML= Math.round(count /100);
+        document.getElementById("timer").innerHTML= Math.round(count /100);
     }
 </script>
 </body>
