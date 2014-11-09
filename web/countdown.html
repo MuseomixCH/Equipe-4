@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>
+        #timeBlock {
+            font-size: 10em;
+            left: 50%;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div id="timeBlock" class="row">
+        <span id="Timer" class="timer timerfront">60:00</span>
+    </div>
+<script>
+    var count = 900;
+    var counter = setInterval(timer, 10);
+
+    function timer()
+    {
+        if (count <= 0)
+        {
+            clearInterval(counter);
+            return;
+        }
+        count--;
+        document.getElementById("Timer").innerHTML= Math.round(count /100);
+    }
+</script>
+</body>
+</html>
