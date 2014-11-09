@@ -89,7 +89,6 @@ $( document ).ready(function() {
         e.preventDefault();
         hideMainContent();
         transparentBackground();
+        $('#subContent').html();
     });
-
-    showSubContent();
 });
