@@ -131,7 +131,7 @@
             <span class="icon-bar"></span>
           </button>
           -->
-          <a class="navbar-brand" href="/">muséochoix</a>
+          <a class="navbar-brand" href="/">museochoix</a>
         </div>
       </div>
     </div>
@@ -191,7 +191,7 @@
                 content = typeof content !== 'undefined' ? content : 'photo';
                 var icon;
                 if(content=='photo'){
-                    button = '<a href="#" id="takePic"><img alt="" src="img/picto_photo3.png"><h4>Scanner l\'oeuvre</h4></a>';
+                    button = '<a href="#" id="takePic"><span class="glyphicon glyphicon-camera"></span></div>';
                 }else{
                     button = '<span class="glyphicon glyphicon-fullscreen"></span>';
                 }
@@ -216,6 +216,13 @@
                 if(imgUrl != undefined){
                     $('#personImg').append('<img src="'+imgUrl+'">')
                 }
+            }
+
+            /*
+             display all divs in the subContent
+             */
+            function showSubContent(){
+                $('#subContent').children().show();
             }
 
             $.urlParam = function(name){
@@ -252,6 +259,7 @@
                     transparentBackground();
                     $('#subContent').html();
                 });
+                loadPersonPicture($.urlParam('img'));
             });
     </script>
     </body>
