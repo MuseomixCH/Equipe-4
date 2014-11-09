@@ -396,11 +396,15 @@
     NSString *tempPath = [documentsDirectory stringByAppendingPathComponent:@"last.mp4"];
     
     [videoData writeToFile:tempPath atomically:NO];
-    
-    MPMoviePlayerViewController * view = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL fileURLWithPath:[documentsDirectory stringByAppendingPathComponent:@"previous.mp4"]]];
-    [picker dismissViewControllerAnimated:YES completion:^{
-        [self presentModalViewController:view animated:YES];
-    }];
+    NSString * prev = [documentsDirectory stringByAppendingPathComponent:@"previous.mp4"];
+    if([[NSFileManager defaultManager] fileExistsAtPath:prev]) {
+        MPMoviePlayerViewController * view = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL fileURLWithPath:prev]];
+        [picker dismissViewControllerAnimated:YES completion:^{
+            [self presentModalViewController:view animated:YES];
+        }];
+    } else {
+        [picker dismissMoviePlayerViewControllerAnimated];
+    }
     
     
 }
@@ -478,6 +482,18 @@
 
 
 -(void)showFinalScreen {
+    
+    
+    for(NSNumber *n in [VDARModelManager sharedInstance].allModelsIDs) {
+        VDARModel * m = [[VDARModelManager sharedInstance] loadModel:[n unsignedIntegerValue]];
+        if(m) {
+                m.modelIgnored = YES;
+        }
+    }
+    
+
+    
+    
     NSString * file = [[NSBundle mainBundle] pathForResource:@"end.html" ofType:@"" inDirectory:@"web"];
     if(!file) {
         NSLog(@"Error while loading map screen.");
