@@ -184,6 +184,10 @@
             #topContent {
                 margin-bottom: 30px;
             }
+            #suite {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
         </style>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
@@ -212,10 +216,13 @@
         <div class="col-xs-12">
             <div id="topContent">
                 <img src="represente.png">
-                <div style="display: none">
-                    <h3>Qu’as-tu représenté ?</h3>
+                <div style="display: none; font-style:2em;">
+                    <h3 style="font-style: 2em;">Qu’as-tu représenté ?</h3>
                     <p>La fille allongée en rose est la romaine Lucrèce. Non, elle ne dort pas… elle est morte ! Elle vient de se poignarder. L’homme avec la cape rouge qui tient son bras est son père : il est rouge de colère. A gauche, Brutus lève le poignard de Lucrèce, il est en train de jurer de venger sa mort.</p>
-                    <p class="text-right"><a href="#" onclick="return false;">Pour en savoir plus</p>
+                    <p><a href="#" onclick="return false;">Pour en savoir plus</a></p>
+                </div>
+                <div class="text-right">
+                    <button id="suite" type="button" class="btn btn-info">Continuer</button>
                 </div>
             </div>
         </div>
