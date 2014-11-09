@@ -67,7 +67,7 @@ body {
 }
 
 #mainContent .dot.active {
-    background: #FF0000;
+    background: #00bde8;
     -webkit-animation-name: grow;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
