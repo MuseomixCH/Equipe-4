@@ -139,15 +139,15 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-12">
+            <div id="topContent">
+                <h3>Qu’as-tu représenté ?</h3>
+                <p>La romaine Lucrèce s’est poignardée après avoir été abusée par Sextus, fils du roi de Rome. Son mari la découvre et soutient son bras gauche alors que Brutus lève son poignard et jure de venger cette mort injuste.</p>
+                <p class="text-right"><a href="http://fr.wikipedia.org/wiki/Lucr%C3%A8ce_%28dame_romaine%29">Pour en savoir plus</p>
+            </div>
             <div id="mainContent">
                 <div id="personImg">
 
                 </div>
-            </div>
-            <div id="subContent">
-                <h3>Qu’as-tu représenté ?</h3>
-                <p>La romaine Lucrèce s’est poignardée après avoir été abusée par Sextus, fils du roi de Rome. Son mari la découvre et soutient son bras gauche alors que Brutus lève son poignard et jure de venger cette mort injuste.</p>
-                <p><a href="http://fr.wikipedia.org/wiki/Lucr%C3%A8ce_%28dame_romaine%29">Pour en savoir plus</p>
             </div>
         </div>
       </div>
@@ -191,7 +191,7 @@
                 content = typeof content !== 'undefined' ? content : 'photo';
                 var icon;
                 if(content=='photo'){
-                    button = '<a href="#" id="takePic"><span class="glyphicon glyphicon-camera"></span></div>';
+                    button = '<a href="#" id="takePic"><img alt="" src="img/picto_photo3.png"><h4>Scanner l\'oeuvre</h4></a>';
                 }else{
                     button = '<span class="glyphicon glyphicon-fullscreen"></span>';
                 }
@@ -216,13 +216,6 @@
                 if(imgUrl != undefined){
                     $('#personImg').append('<img src="'+imgUrl+'">')
                 }
-            }
-
-            /*
-             display all divs in the subContent
-             */
-            function showSubContent(){
-                $('#subContent').children().show();
             }
 
             $.urlParam = function(name){
@@ -259,7 +252,6 @@
                     transparentBackground();
                     $('#subContent').html();
                 });
-                loadPersonPicture($.urlParam('img'));
             });
     </script>
     </body>
