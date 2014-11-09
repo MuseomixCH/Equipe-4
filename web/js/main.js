@@ -68,7 +68,7 @@ $.urlParam = function(name){
 }
 
 $( document ).ready(function() {
-    var idList = ["bja43whspny60x2","knliyajr8y6x0yt","xrhnpx6pfdlquob"];
+    var idList = ["8oo2l8fk3pdlzy6","knliyajr8y6x0yt","bja43whspny60x2"];
     var theList;
     $('#formmuseochoix').submit(function(e) {
         e.preventDefault();
