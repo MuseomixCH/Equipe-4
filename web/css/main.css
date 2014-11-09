@@ -109,3 +109,71 @@ body {
 #end #mainContent img {
     margin-top: 100px;
 }
+
+p{
+    font-family: quicksand, sans-serif;
+
+}
+h1, h2, h3, h4, a{
+    font-family: quicksand, sans-serif;
+}
+.navbar-header{
+    font-weight: bold;
+}
+label{
+    font-family: quicksand, sans-serif;
+
+
+}
+label:hover{  }
+.btn-lg, .btn-group-lg > .btn{
+    font-size: 18pt;
+}
+
+.btn-default, .btn-default.active, .btn-default.disabled{ border-color:#00BDE8;
+}
+.btn-default.active{
+    background-color:#00BDE8;
+}
+#audio #mainContent {
+    text-align: center;
+    padding-top: 25%;
+}
+
+#subContent h4{
+    color:#00BDE8;
+    text-align: center;
+}
+
+#mainContent .contentIcon{
+    width: 150px;
+}
+
+.navbar{
+    background-color: white;
+}
+
+.nav > li > a:hover, .nav > li > a:focus, .navbar-brand:hover{
+    color:black !important;
+}
+.navbar-inverse .navbar-nav > li > a  {
+    color:#00BDE8;
+}
+.navbar-inverse .navbar-brand {
+    color:#00BDE8;
+
+}
+.navbar-inverse{
+    border-color: #00BDE8;
+}
+.navbar-fixed-top {
+    border-width: 0 0 3px !important;
+    top: 0;
+}
+a {
+    color: #00bde8;
+}
+
+#formmuseochoix .btn-info, .btn-info {
+    background-color: #00bde8;
+}
