@@ -37,7 +37,7 @@
     //Synchro
     [[VDARModelManager sharedInstance].afterLoadingQueue addOperationWithBlock:^{
        dispatch_async(dispatch_get_main_queue(), ^{
-           if([VDARModelManager sharedInstance].allModelsIDs.count==07) {
+           if([VDARModelManager sharedInstance].allModelsIDs.count==0) {
                [[VDARRemoteController sharedInstance] syncRemoteModelsAsynchronouslyWithPriors:@[ [VDARTagPrior tagWithName:@"museomix"] ] withCompletionBlock:^(id result, NSError *err) {
                    NSLog(@"Synced %lu models",((NSArray*)result).count);
                }];

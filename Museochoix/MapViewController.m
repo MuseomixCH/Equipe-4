@@ -392,6 +392,8 @@
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *tempPath = [documentsDirectory stringByAppendingPathComponent:@"last.mp4"];
     
+    [[NSFileManager defaultManager] removeItemAtPath:[documentsDirectory stringByAppendingPathComponent:@"previous.mp4"] error:nil];
+    
     [[NSFileManager defaultManager] moveItemAtPath:tempPath toPath:[documentsDirectory stringByAppendingPathComponent:@"previous.mp4"] error:nil];
 
  
@@ -400,8 +402,6 @@
     
     NSData *videoData = [NSData dataWithContentsOfURL:videoURL];
    
-    tempPath = [documentsDirectory stringByAppendingPathComponent:@"last.mp4"];
-    
     [videoData writeToFile:tempPath atomically:NO];
     NSString * prev = [documentsDirectory stringByAppendingPathComponent:@"previous.mp4"];
     if([[NSFileManager defaultManager] fileExistsAtPath:prev]) {
@@ -432,7 +432,7 @@
     
     videoRecorder.mediaTypes = videoMediaTypesOnly;
     videoRecorder.videoQuality = UIImagePickerControllerQualityTypeMedium;
-    videoRecorder.videoMaximumDuration = 30;			//Specify in seconds (600 is default)
+    videoRecorder.videoMaximumDuration = 60;			//Specify in seconds (600 is default)
  
     [self presentModalViewController:videoRecorder animated:YES];
    // [videoRecorder release];
