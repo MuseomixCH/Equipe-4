@@ -28,8 +28,8 @@ body {
 #mainContent .dot {
     background: #888888;
     border-radius: 50%;
-    width: 4%;
-    height: 4%;
+    width: 20px;
+    height: 20px;
     position: absolute;
 }
 
