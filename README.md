@@ -13,7 +13,7 @@ Plus d'infos et de détails sur http://www.museomix.org/prototypes/museochoix/
 Installation
 ------------
 
-L'application Muséochoix a été compilée pour être installée sur l'iPad 2 mis à disposition durant la journée Muséomix. Il ne peut être installé que sur cet iPad.
+L'application Muséochoix a été compilée pour être installée sur l'iPad 2 mis à disposition durant l'événement Muséomix. Il ne peut être installé que sur cet iPad (voir exception ci-dessous).
 
 Afin d'installer l'application:
 
@@ -27,7 +27,7 @@ A noter que l'application peut en théorie être re-signée afin d'être install
 Fonctionnement & Maintenance
 ----------------------------
 
-L'application a besoin de données qui sont téléchargées depuis Internet au premier lancement. Il faut donc **impératvement** avoir une connexion Wifi fonctionnelle sur l'iPad lors du premier lancement de l'application. Par la suite, aucune connexion n'est nécessaire.
+L'application a besoin de données qui sont téléchargées depuis Internet au premier lancement. Il faut donc **impérativement** avoir une connexion Wifi fonctionnelle sur l'iPad lors du premier lancement de l'application. Par la suite, aucune connexion n'est nécessaire.
 
 
 
