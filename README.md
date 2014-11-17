@@ -24,8 +24,18 @@ Afin d'installer l'application:
 A noter que l'application peut en théorie être re-signée afin d'être installée sur d'autres iPad en ayant un compte Apple Developer à disposition et en suivant cette procédure: https://coderwall.com/p/cea3fw/resign-ipa-with-new-distribution-certificate
 
 
-Fonctionnement & Maintenance
-----------------------------
+Fonctionnement
+--------------
+
+Lorsque l'application se lance, le visiteur doit choisir son envie (une seule disponible pour ce prototype) ainsi que la durée de sa visite.
+
+Suivant la durée de la visite (30m, 1h, 1h30, 2h), il se verra proposer respectivement 1, 2, 3, 3 oeuvres à découvrir.
+
+Le visteur devra alors se déplacer aux endroits indiqués sur la carte présentée sur l'écran de l'iPad, et, lorsque la personne est devant l'oeuvre, elle devra pointer sa tablette vers la peinture (ou vers la feuille représentant le Geneva Circle Two) afin que la tablette présente au visiteur le contenu relatif à l'oeuvre en question.
+
+
+Maintenance
+-----------
 
 L'application a besoin de données qui sont téléchargées depuis Internet au premier lancement. Il faut donc **impérativement** avoir une connexion Wifi fonctionnelle sur l'iPad lors du premier lancement de l'application. Par la suite, aucune connexion n'est nécessaire.
 
