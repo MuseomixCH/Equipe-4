@@ -50,16 +50,6 @@
 		4E0C35E81A0F9A5000507E4B /* lutte.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4E0C35E71A0F9A5000507E4B /* lutte.mp3 */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4E0C35621A0E4E4A00507E4B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E0C35401A0E4E4A00507E4B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4E0C35471A0E4E4A00507E4B;
-			remoteInfo = Museochoix;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		4E0C35481A0E4E4A00507E4B /* Museochoix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Museochoix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0C354C1A0E4E4A00507E4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,7 +61,6 @@
 		4E0C35561A0E4E4A00507E4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E0C35581A0E4E4A00507E4B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4E0C355B1A0E4E4A00507E4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		4E0C35611A0E4E4A00507E4B /* MuseochoixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuseochoixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0C35711A0E51DE00507E4B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		4E0C35721A0E51DE00507E4B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		4E0C35771A0E532B00507E4B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -138,13 +127,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E0C355E1A0E4E4A00507E4B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -161,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				4E0C35481A0E4E4A00507E4B /* Museochoix.app */,
-				4E0C35611A0E4E4A00507E4B /* MuseochoixTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -254,24 +235,6 @@
 			productReference = 4E0C35481A0E4E4A00507E4B /* Museochoix.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4E0C35601A0E4E4A00507E4B /* MuseochoixTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4E0C356E1A0E4E4A00507E4B /* Build configuration list for PBXNativeTarget "MuseochoixTests" */;
-			buildPhases = (
-				4E0C355D1A0E4E4A00507E4B /* Sources */,
-				4E0C355E1A0E4E4A00507E4B /* Frameworks */,
-				4E0C355F1A0E4E4A00507E4B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4E0C35631A0E4E4A00507E4B /* PBXTargetDependency */,
-			);
-			name = MuseochoixTests;
-			productName = MuseochoixTests;
-			productReference = 4E0C35611A0E4E4A00507E4B /* MuseochoixTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -284,10 +247,6 @@
 					4E0C35471A0E4E4A00507E4B = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = WV2739QU9V;
-					};
-					4E0C35601A0E4E4A00507E4B = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 4E0C35471A0E4E4A00507E4B;
 					};
 				};
 			};
@@ -305,7 +264,6 @@
 			projectRoot = "";
 			targets = (
 				4E0C35471A0E4E4A00507E4B /* Museochoix */,
-				4E0C35601A0E4E4A00507E4B /* MuseochoixTests */,
 			);
 		};
 /* End PBXProject section */
@@ -335,13 +293,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E0C355F1A0E4E4A00507E4B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -357,22 +308,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E0C355D1A0E4E4A00507E4B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4E0C35631A0E4E4A00507E4B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4E0C35471A0E4E4A00507E4B /* Museochoix */;
-			targetProxy = 4E0C35621A0E4E4A00507E4B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4E0C35551A0E4E4A00507E4B /* Main.storyboard */ = {
@@ -454,7 +390,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Vidinoti SA (WV2739QU9V)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -479,6 +415,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Museochoix",
@@ -487,6 +425,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "532371a7-033c-4afc-a533-8ea11121be2f";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -504,41 +443,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "532371a7-033c-4afc-a533-8ea11121be2f";
 				TARGETED_DEVICE_FAMILY = 2;
-			};
-			name = Release;
-		};
-		4E0C356F1A0E4E4A00507E4B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MuseochoixTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Museochoix.app/Museochoix";
-			};
-			name = Debug;
-		};
-		4E0C35701A0E4E4A00507E4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MuseochoixTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Museochoix.app/Museochoix";
 			};
 			name = Release;
 		};
@@ -559,15 +465,6 @@
 			buildConfigurations = (
 				4E0C356C1A0E4E4A00507E4B /* Debug */,
 				4E0C356D1A0E4E4A00507E4B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4E0C356E1A0E4E4A00507E4B /* Build configuration list for PBXNativeTarget "MuseochoixTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4E0C356F1A0E4E4A00507E4B /* Debug */,
-				4E0C35701A0E4E4A00507E4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
