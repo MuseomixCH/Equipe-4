@@ -34,6 +34,14 @@ Suivant la durée de la visite (30m, 1h, 1h30, 2h), il se verra proposer respect
 Le visteur devra alors se déplacer aux endroits indiqués sur la carte présentée sur l'écran de l'iPad, et, lorsque la personne est devant l'oeuvre, elle devra pointer sa tablette vers la peinture (ou vers la feuille représentant le Geneva Circle Two) afin que la tablette présente au visiteur le contenu relatif à l'oeuvre en question.
 
 
+Technologies
+------------
+
+- Augmented Reality toolkit from Vidinoti - http://www.vidinoti.com
+- HTML/CSS/JavaScript
+- iOS SDK
+
+
 Maintenance
 -----------
 
